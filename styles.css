@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+  --orange: hsl(31, 77%, 52%);
+  --cyan-100: hsl(184, 100%, 22%);
+  --cyan-200: hsl(179, 100%, 13%);
+  --gray-100: hsl(0, 0%, 95%);
+  --gray-200: hsla(0, 0%, 100%, 0.75);
+}
+
+.orange {
+  background-color: var(--orange);
+}
+
+.cyan {
+  background-color: var(--cyan-100);
+}
+
+.cyan-dark {
+  background-color: var(--cyan-200);
+}
+
+html {
+  font-size: 15px;
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+.card {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.card:first-child {
+  border-radius: 10px 10px 0 0;
+}
+
+.card:last-child {
+  border-radius: 0 0 10px 10px;
+}
+
+h1 {
+  font-family: 'Big Shoulders Display', cursive;
+  font-size: 2.6rem;
+  color: var(--gray-100);
+}
+
+p {
+  color: var(--gray-200);
+  line-height: 25px;
+}
+
+img {
+  width: 70px;
+}
+
+button {
+  height: 40px;
+  border-radius: 50px;
+  border: none;
+  width: 60%;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+.orange > button {
+  color: var(--orange);
+}
+.cyan > button {
+  color: var(--cyan-100);
+}
+.cyan-dark > button {
+  color: var(--cyan-200);
+}
+button:hover {
+  border: 1px solid var(--gray-100);
+  color: var(--gray-100);
+  background-color: transparent;
+}
+
+@media screen and (min-width: 375px) {
+  .container {
+    display: flex;
+    width: 60%;
+  }
+
+  .card:first-child {
+    border-radius: 10px 0 0 10px;
+  }
+
+  .card:last-child {
+    border-radius: 0 10px 10px 0;
+  }
+}
